@@ -130,4 +130,22 @@ internal class GildedRoseV2V2Test {
         assertEquals(-1, app.items[0].sellIn)
         assertEquals(0, app.items[0].quality)
     }
+
+    @Test
+    fun conjuredUntilSellByDate() {
+        val items = arrayOf(Item("Conjured X", 1, 10))
+        val app = GildedRoseV2(items)
+        app.updateQuality()
+        assertEquals(0, app.items[0].sellIn)
+        assertEquals(8, app.items[0].quality)
+    }
+
+    @Test
+    fun conjuredAfterSellByDate() {
+        val items = arrayOf(Item("Conjured X", 0, 10))
+        val app = GildedRoseV2(items)
+        app.updateQuality()
+        assertEquals(-1, app.items[0].sellIn)
+        assertEquals(6, app.items[0].quality)
+    }
 }

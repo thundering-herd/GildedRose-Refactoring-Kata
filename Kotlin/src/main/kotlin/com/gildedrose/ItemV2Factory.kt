@@ -7,6 +7,7 @@ object ItemV2Factory {
             item.name.startsWith("Backstage passes") -> BackstagePasses(item)
             item.name.startsWith("Sulfuras") -> Sulfuras(item)
             item.name.startsWith("Aged Brie") -> AgedBrie(item)
+            item.name.startsWith("Conjured") -> Conjured(item)
             else -> RegularShopItem(item)
         }
     }

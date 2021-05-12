@@ -24,6 +24,10 @@ abstract class AbstractItemV2(protected val item: Item) {
         item.quality -= 2
     }
 
+    protected fun decreaseQualityByFour() {
+        item.quality -= 4
+    }
+
     protected fun increaseQualityByOne() {
         item.quality += 1
     }
