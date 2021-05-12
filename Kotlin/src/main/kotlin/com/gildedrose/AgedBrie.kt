@@ -3,10 +3,10 @@ package com.gildedrose
 class AgedBrie(item: Item) : AbstractItemV2(item) {
     override fun updateQualityInternal() {
         if (item.sellIn > 0) {
-            item.quality += 1
+            increaseQualityByOne()
         } else {
-            item.quality += 2
+            increaseQualityByTwo()
         }
-        if (item.quality > 50) item.quality = 50
+        ensureQualityNoMoreThanFifty()
     }
 }
