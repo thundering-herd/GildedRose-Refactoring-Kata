@@ -18,22 +18,23 @@ abstract class AbstractItemV2(protected val item: Item) {
 
     protected fun decreaseQualityBy(value: Int) {
         item.quality -= value
+        ensureQualityNoLessThanZero()
     }
 
     protected fun increaseQualityBy(value: Int) {
         item.quality += value
+        ensureQualityNoMoreThanFifty()
     }
-
 
     protected fun setQualityToZero() {
         item.quality = 0
     }
 
-    protected fun ensureQualityNoLessThanZero() {
+    private fun ensureQualityNoLessThanZero() {
         if (item.quality < 0) item.quality = 0
     }
 
-    protected fun ensureQualityNoMoreThanFifty() {
+    private fun ensureQualityNoMoreThanFifty() {
         if (item.quality > 50) item.quality = 50
     }
 }

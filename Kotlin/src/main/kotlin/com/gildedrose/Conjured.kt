@@ -6,7 +6,6 @@ class Conjured(item: Item) : AbstractItemV2(item) {
             decreaseQualityBy(2)
         } else {
             decreaseQualityBy(4)
-            ensureQualityNoLessThanZero()
         }
     }
 }

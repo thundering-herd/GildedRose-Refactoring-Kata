@@ -6,7 +6,6 @@ class RegularShopItem(item: Item) : AbstractItemV2(item) {
             decreaseQualityBy(1)
         } else {
             decreaseQualityBy(2)
-            ensureQualityNoLessThanZero()
         }
     }
 }

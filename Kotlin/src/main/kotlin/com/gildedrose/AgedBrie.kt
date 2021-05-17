@@ -7,6 +7,5 @@ class AgedBrie(item: Item) : AbstractItemV2(item) {
         } else {
             increaseQualityBy(2)
         }
-        ensureQualityNoMoreThanFifty()
     }
 }
