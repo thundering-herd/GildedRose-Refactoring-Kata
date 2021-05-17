@@ -16,28 +16,12 @@ abstract class AbstractItemV2(protected val item: Item) {
         item.sellIn -= 1
     }
 
-    protected fun decreaseQualityByOne() {
-        item.quality -= 1
+    protected fun decreaseQualityBy(value: Int) {
+        item.quality -= value
     }
 
-    protected fun decreaseQualityByTwo() {
-        item.quality -= 2
-    }
-
-    protected fun decreaseQualityByFour() {
-        item.quality -= 4
-    }
-
-    protected fun increaseQualityByOne() {
-        item.quality += 1
-    }
-
-    protected fun increaseQualityByTwo() {
-        item.quality += 2
-    }
-
-    protected fun increaseQualityByThree() {
-        item.quality += 3
+    protected fun increaseQualityBy(value: Int) {
+        item.quality += value
     }
 
 
